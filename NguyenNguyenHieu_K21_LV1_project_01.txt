@@ -1,0 +1,50 @@
+    1  python --version
+    2  sudo apt-get install python3
+    3  python --version
+    4  python3 --version
+    5  python --version
+    6  sudo apt-get update
+    7  sudo apt-get -y install alacarte
+    8  alacarte --version
+    9  pip install matplotlib
+   10  pip install numpy
+   11  pip install pandas
+   12  sudo apt-get install python3-tk
+   13  sudo snap install notion-desktop
+   14  sudo snap install discord
+   15  sudo apt update
+   16  sudo apt upgrade
+   17  sudo apt remove --assume-yes vim-tiny
+   18  sudo apt-get -y install vim
+   19  vi --version
+   20  vim
+   21  ls ~/.local/share/applications | grep -i pycharm
+   22  ls ~/.local/share/applications | grep -i pycharm.desktop
+   23  ls /mnt/hgfs/
+   24  ls /mnt/shared
+   25  mkdir linux_movie_project
+   26  cd  linux_movie_project
+   27  sudo apt update
+   28  sudo apt install open-vm-tools-desktop -y
+   29  reboot
+   30  sudo snap install office365webdesktop --beta
+   31  mkdir ~/Downloads/linux_movie_project
+   32  cd linux_movie_project
+   33  cd ~/Downloads/linux_movie_project
+   34  head -5 tmdb-movies.csv
+   35  (head -1 tmdb-movies.csv && tail -n +2 tmdb-movies.csv | sort -t',' -k16,16r) > movies_sorted_by_date.csv
+   36  (head -1 tmdb-movies.csv && tail -n +2 tmdb-movies.csv | awk -F',' '$18 > 7.5') > movies_rating_above_7_5.csv
+   37  tail -n +2 tmdb-movies.csv | sort -t',' -k5,5nr | head -1
+   38  tail -n +2 tmdb-movies.csv | sort -t',' -k5,5n | head -1
+   39  tail -n +2 tmdb-movies.csv | awk -F',' '{sum += $5} END {print "Total Revenue:", sum}'
+   40  (head -1 tmdb-movies.csv;  tail -n +2 tmdb-movies.csv |  awk -F',' 'BEGIN{OFS=","} {profit=$5-$4; print $0, profit}' |  sort -t',' -kNF,NR nr | head -10 ) > top10_profit_movies.csv
+   41  (head -1 tmdb-movies.csv;  tail -n +2 tmdb-movies.csv |  awk -F',' 'BEGIN{OFS=","} {profit=$5-$4; print $0, profit}' |  sort -t',' -k22,22nr | head -10 ) > top10_profit_movies.csv
+   42  tail -n +2 tmdb-movies.csv | cut -d',' -f9 | sort | uniq -c | sort -nr | head -5
+   43  tail -n +2 tmdb-movies.csv | awk -F',' '{split($7, arr, "|"); for (i in arr) print arr[i]}' | sort | uniq -c | sort -nr | head -10
+   44  tail -n +2 tmdb-movies.csv | awk -F',' '{split($14, arr, "|"); for (i in arr) print arr[i]}' | sort | uniq -c | sort -nr genre_statistic.txt
+   45  mkdir genre_statistic.txt
+   46  tail -n +2 tmdb-movies.csv | awk -F',' '{split($14, arr, "|"); for (i in arr) print arr[i]}' | sort | uniq -c | sort -nr > genre_statistic.txt
+   47  tail -n +2 tmdb-movies.csv | awk -F',' -v OFS=',' '{split($7, arr, "|"); for (i in arr) print arr[i], $5}' | awk -F',' '{rev[$1]+=$2} END {for (a in rev) print a, rev[a]}' | sort -k2 -nr | head -10
+   48  cat ~/.bash_history
+   49  touch project1.txt
+   50  history > project1.txt
