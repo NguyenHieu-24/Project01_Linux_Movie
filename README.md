@@ -39,10 +39,9 @@ The application processes the tmdb-movies.csv file and generates the following r
 1. Ensure tmdb-movies.csv is in the same directory as the script.
 
 2. Run the Python script:
-  ```bash
-  python NguyenNguyenHieu_K21_LV1_project_01.txt
-  ```
-  (Note: You may want to rename the source file to .py for better execution, e.g., main.py)
+```bash
+python NguyenNguyenHieu_K21_LV1_project_01.txt
+```
 
 3. Check the generated output files in the current folder for results.
 
